@@ -30,8 +30,9 @@ namespace WeatherApp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Search = new System.Windows.Forms.TextBox();
             this.lbl_WeatherApp = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_Recent = new System.Windows.Forms.Label();
@@ -90,8 +91,9 @@ namespace WeatherApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_Search);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox_Search);
             this.panel1.Controls.Add(this.lbl_WeatherApp);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -99,32 +101,50 @@ namespace WeatherApp
             this.panel1.Size = new System.Drawing.Size(926, 68);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Brown;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Bisque;
+            this.button1.Location = new System.Drawing.Point(892, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btn_Search
             // 
             this.btn_Search.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Search.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btn_Search.Location = new System.Drawing.Point(474, 20);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(34, 30);
             this.btn_Search.TabIndex = 2;
-            this.btn_Search.Text = "X";
+            this.btn_Search.Text = ">";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // textBox1
+            // textBox_Search
             // 
-            this.textBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox1.Location = new System.Drawing.Point(177, 20);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Search weather by location...";
+            this.textBox_Search.BackColor = System.Drawing.Color.AliceBlue;
+            this.textBox_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Search.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox_Search.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox_Search.Location = new System.Drawing.Point(177, 20);
+            this.textBox_Search.Multiline = true;
+            this.textBox_Search.Name = "textBox_Search";
+            this.textBox_Search.Size = new System.Drawing.Size(280, 30);
+            this.textBox_Search.TabIndex = 0;
+            this.textBox_Search.TabStop = false;
+            this.textBox_Search.Text = "Search for a city...";
+            this.textBox_Search.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_Search_MouseClick);
             // 
             // lbl_WeatherApp
             // 
@@ -183,6 +203,7 @@ namespace WeatherApp
             this.btn_ThirdCity.TabIndex = 2;
             this.btn_ThirdCity.Text = "Third City";
             this.btn_ThirdCity.UseVisualStyleBackColor = true;
+            this.btn_ThirdCity.Click += new System.EventHandler(this.btn_ThirdCity_Click);
             // 
             // btn_SecondCity
             // 
@@ -197,6 +218,7 @@ namespace WeatherApp
             this.btn_SecondCity.TabIndex = 1;
             this.btn_SecondCity.Text = "Second City";
             this.btn_SecondCity.UseVisualStyleBackColor = true;
+            this.btn_SecondCity.Click += new System.EventHandler(this.btn_SecondCity_Click);
             // 
             // btn_FirstCity
             // 
@@ -211,6 +233,7 @@ namespace WeatherApp
             this.btn_FirstCity.TabIndex = 0;
             this.btn_FirstCity.Text = "First City";
             this.btn_FirstCity.UseVisualStyleBackColor = true;
+            this.btn_FirstCity.Click += new System.EventHandler(this.btn_FirstCity_Click);
             // 
             // panel4
             // 
@@ -629,7 +652,7 @@ namespace WeatherApp
         private System.Windows.Forms.Button btn_FirstCity;
         private System.Windows.Forms.Button btn_ThirdCity;
         private System.Windows.Forms.Button btn_SecondCity;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Search;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbl_WeatherNow;
@@ -663,6 +686,7 @@ namespace WeatherApp
         private System.Windows.Forms.Label lbl_tempDay2;
         private System.Windows.Forms.Label lbl_nameDay3;
         private System.Windows.Forms.Label lbl_nameDay2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

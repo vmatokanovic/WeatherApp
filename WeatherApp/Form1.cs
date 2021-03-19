@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace WeatherApp
 {
@@ -20,6 +21,7 @@ namespace WeatherApp
         {
             InitializeComponent();
             getWeather("Osijek");
+            getRecent();
         }
 
         void getWeather(string city)
@@ -91,6 +93,54 @@ namespace WeatherApp
                 Image weatherImg = Bitmap.FromStream(weatherIcon);
                 return weatherImg;
             }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if(textBox_Search.Text != "")
+            {
+                getWeather(textBox_Search.Text);
+                using(StreamWriter str = new StreamWriter("recent_searches.txt",true))
+                {
+                    str.WriteLine(textBox_Search.Text);
+                }
+                getRecent();
+                textBox_Search.Text = "Search for a city...";
+            }
+        }
+        void getRecent()
+        {
+            using (StreamReader sr = new StreamReader("recent_searches.txt"))
+            {
+                string[] lines = File.ReadAllLines("recent_searches.txt");
+                Array.Reverse(lines);
+                btn_FirstCity.Text = lines[0];
+                btn_SecondCity.Text = lines[1];
+                btn_ThirdCity.Text = lines[2];
+            }
+        }
+
+        private void btn_FirstCity_Click(object sender, EventArgs e)
+        {
+            string cityName = btn_FirstCity.Text;
+            getWeather(cityName);
+        }
+
+        private void btn_SecondCity_Click(object sender, EventArgs e)
+        {
+            string cityName = btn_SecondCity.Text;
+            getWeather(cityName);
+        }
+
+        private void btn_ThirdCity_Click(object sender, EventArgs e)
+        {
+            string cityName = btn_ThirdCity.Text;
+            getWeather(cityName);
+        }
+
+        private void textBox_Search_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox_Search.Text = "";
         }
     }
 }
