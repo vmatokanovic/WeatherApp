@@ -16,7 +16,6 @@ namespace WeatherApp
     public partial class Form1 : Form
     {
         const string APPID = "1e8ed35d54d0446444c006631e9f4b6d";
-        string cityName = "Osijek";
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +34,7 @@ namespace WeatherApp
 
                 WeatherNowInfo output = result;
                 lbl_cityName.Text = string.Format("{0}, {1}", output.name, output.sys.country);
-                lbl_Temperature.Text = string.Format("{0} \u00B0C", output.main.temp);
+                lbl_Temperature.Text = string.Format("{0:F0} \u00B0C", output.main.temp);
                 lbl_Condition.Text = string.Format("{0}", output.Weather[0].description);
                 lbl_Humidity.Text = string.Format("Humidity: {0} %", output.main.humidity);
                 lbl_Pressure.Text = string.Format("Pressure: {0} hPa", output.main.pressure);
@@ -46,6 +45,7 @@ namespace WeatherApp
                 //Napraviti funkciju koja za taj isti grad prikazuje vrijeme za iduca 3 dana,
                 //ali ti trebaju coordinate lon i lat
                 getForecast(coord_lon, coord_lat);
+                getHourly(coord_lon, coord_lat);
                 void getForecast(string coordLon, string coordLat)
                 {
                     string url = string.Format("http://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&appid={2}&units=metric", coordLat, coordLon, APPID);
@@ -57,21 +57,61 @@ namespace WeatherApp
                         WeatherForecast forecast = Object;
                         lbl_nameDay1.Text = string.Format("{0}", getDate(forecast.daily[1].dt).DayOfWeek);
                         lbl_condDay1.Text = string.Format("{0}", forecast.daily[1].weather[0].description);
-                        lbl_tempDay1.Text = string.Format("{0} \u00B0C", forecast.daily[1].temp.day);
+                        lbl_tempDay1.Text = string.Format("{0:F0} \u00B0C", forecast.daily[1].temp.day);
                         lbl_windDay1.Text = string.Format("Wind speed: {0} m/s", forecast.daily[1].wind_speed);
                         picture_day1.Image = setIcon(forecast.daily[1].weather[0].icon);
 
                         lbl_nameDay2.Text = string.Format("{0}", getDate(forecast.daily[2].dt).DayOfWeek);
                         lbl_condDay2.Text = string.Format("{0}", forecast.daily[2].weather[0].description);
-                        lbl_tempDay2.Text = string.Format("{0} \u00B0C", forecast.daily[2].temp.day);
+                        lbl_tempDay2.Text = string.Format("{0:F0} \u00B0C", forecast.daily[2].temp.day);
                         lbl_windDay2.Text = string.Format("Wind speed: {0} m/s", forecast.daily[2].wind_speed);
                         picture_day2.Image = setIcon(forecast.daily[2].weather[0].icon);
 
                         lbl_nameDay3.Text = string.Format("{0}", getDate(forecast.daily[3].dt).DayOfWeek);
                         lbl_condDay3.Text = string.Format("{0}", forecast.daily[3].weather[0].description);
-                        lbl_tempDay3.Text = string.Format("{0} \u00B0C", forecast.daily[3].temp.day);
+                        lbl_tempDay3.Text = string.Format("{0:F0} \u00B0C", forecast.daily[3].temp.day);
                         lbl_windDay3.Text = string.Format("Wind speed: {0} m/s", forecast.daily[3].wind_speed);
                         picture_day3.Image = setIcon(forecast.daily[3].weather[0].icon);
+                    }
+                }
+                void getHourly(string coordLon, string coordLat)
+                {
+                    string url = string.Format("http://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&appid={2}&units=metric", coordLat, coordLon, APPID);
+                    using (WebClient web = new WebClient())
+                    {
+                        var json = web.DownloadString(url);
+                        var ObjectH = JsonConvert.DeserializeObject<WeatherHourly>(json);
+
+                        WeatherHourly hourly = ObjectH;
+                        lbl_TempHour1.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[1].temp);
+                        lbl_condHour1.Text = string.Format("{0}", hourly.hourly[1].weather[0].description);
+                        lbl_windHour1.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[1].wind_speed);
+                        picture_hour1.Image = setIcon(hourly.hourly[1].weather[0].icon);
+
+                        lbl_TempHour2.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[2].temp);
+                        lbl_condHour2.Text = string.Format("{0}", hourly.hourly[2].weather[0].description);
+                        lbl_windHour2.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[2].wind_speed);
+                        picture_hour2.Image = setIcon(hourly.hourly[2].weather[0].icon);
+
+                        lbl_TempHour3.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[3].temp);
+                        lbl_condHour3.Text = string.Format("{0}", hourly.hourly[3].weather[0].description);
+                        lbl_windHour3.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[3].wind_speed);
+                        picture_hour3.Image = setIcon(hourly.hourly[3].weather[0].icon);
+
+                        lbl_TempHour4.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[4].temp);
+                        lbl_condHour4.Text = string.Format("{0}", hourly.hourly[4].weather[0].description);
+                        lbl_windHour4.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[4].wind_speed);
+                        picture_hour4.Image = setIcon(hourly.hourly[4].weather[0].icon);
+
+                        lbl_TempHour5.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[5].temp);
+                        lbl_condHour5.Text = string.Format("{0}", hourly.hourly[5].weather[0].description);
+                        lbl_windHour5.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[5].wind_speed);
+                        picture_hour5.Image = setIcon(hourly.hourly[5].weather[0].icon);
+
+                        lbl_TempHour6.Text = string.Format("{0:F0} \u00B0C", hourly.hourly[6].temp);
+                        lbl_condHour6.Text = string.Format("{0}", hourly.hourly[6].weather[0].description);
+                        lbl_windHour6.Text = string.Format("Wind speed: {0} m/s", hourly.hourly[6].wind_speed);
+                        picture_hour6.Image = setIcon(hourly.hourly[6].weather[0].icon);
                     }
                 }
             } 
@@ -99,7 +139,9 @@ namespace WeatherApp
         {
             if(textBox_Search.Text != "")
             {
-                getWeather(textBox_Search.Text);
+                var nameOfCity = textBox_Search.Text;
+                nameOfCity = nameOfCity.Replace(" ", "+");
+                getWeather(nameOfCity);
                 using(StreamWriter str = new StreamWriter("recent_searches.txt",true))
                 {
                     str.WriteLine(textBox_Search.Text);
@@ -141,6 +183,11 @@ namespace WeatherApp
         private void textBox_Search_MouseClick(object sender, MouseEventArgs e)
         {
             textBox_Search.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

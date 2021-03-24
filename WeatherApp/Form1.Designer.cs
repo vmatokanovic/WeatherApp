@@ -51,6 +51,40 @@ namespace WeatherApp
             this.lbl_Temperature = new System.Windows.Forms.Label();
             this.lbl_cityName = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_windHour6 = new System.Windows.Forms.Label();
+            this.lbl_condHour6 = new System.Windows.Forms.Label();
+            this.picture_hour6 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour6 = new System.Windows.Forms.Label();
+            this.lbl_windHour3 = new System.Windows.Forms.Label();
+            this.lbl_condHour3 = new System.Windows.Forms.Label();
+            this.picture_hour3 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour3 = new System.Windows.Forms.Label();
+            this.lbl_windHour5 = new System.Windows.Forms.Label();
+            this.lbl_condHour5 = new System.Windows.Forms.Label();
+            this.picture_hour5 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour5 = new System.Windows.Forms.Label();
+            this.lbl_windHour2 = new System.Windows.Forms.Label();
+            this.lbl_condHour2 = new System.Windows.Forms.Label();
+            this.picture_hour2 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour2 = new System.Windows.Forms.Label();
+            this.lbl_windHour4 = new System.Windows.Forms.Label();
+            this.lbl_condHour4 = new System.Windows.Forms.Label();
+            this.picture_hour4 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour4 = new System.Windows.Forms.Label();
+            this.lbl_windHour1 = new System.Windows.Forms.Label();
+            this.lbl_condHour1 = new System.Windows.Forms.Label();
+            this.picture_hour1 = new System.Windows.Forms.PictureBox();
+            this.lbl_TempHour1 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_windDay3 = new System.Windows.Forms.Label();
             this.lbl_condDay3 = new System.Windows.Forms.Label();
@@ -72,12 +106,24 @@ namespace WeatherApp
             this.lbl_nameDay1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbl_nextDays = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_now)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour1)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_day3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_day2)).BeginInit();
@@ -86,6 +132,7 @@ namespace WeatherApp
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,6 +162,7 @@ namespace WeatherApp
             this.button1.TabIndex = 3;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Search
             // 
@@ -352,10 +400,412 @@ namespace WeatherApp
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel6.Location = new System.Drawing.Point(190, 242);
+            this.panel6.Controls.Add(this.lbl_windHour6);
+            this.panel6.Controls.Add(this.lbl_condHour6);
+            this.panel6.Controls.Add(this.picture_hour6);
+            this.panel6.Controls.Add(this.lbl_TempHour6);
+            this.panel6.Controls.Add(this.lbl_windHour3);
+            this.panel6.Controls.Add(this.lbl_condHour3);
+            this.panel6.Controls.Add(this.picture_hour3);
+            this.panel6.Controls.Add(this.lbl_TempHour3);
+            this.panel6.Controls.Add(this.lbl_windHour5);
+            this.panel6.Controls.Add(this.lbl_condHour5);
+            this.panel6.Controls.Add(this.picture_hour5);
+            this.panel6.Controls.Add(this.lbl_TempHour5);
+            this.panel6.Controls.Add(this.lbl_windHour2);
+            this.panel6.Controls.Add(this.lbl_condHour2);
+            this.panel6.Controls.Add(this.picture_hour2);
+            this.panel6.Controls.Add(this.lbl_TempHour2);
+            this.panel6.Controls.Add(this.lbl_windHour4);
+            this.panel6.Controls.Add(this.lbl_condHour4);
+            this.panel6.Controls.Add(this.picture_hour4);
+            this.panel6.Controls.Add(this.lbl_TempHour4);
+            this.panel6.Controls.Add(this.lbl_windHour1);
+            this.panel6.Controls.Add(this.lbl_condHour1);
+            this.panel6.Controls.Add(this.picture_hour1);
+            this.panel6.Controls.Add(this.lbl_TempHour1);
+            this.panel6.Controls.Add(this.panel16);
+            this.panel6.Controls.Add(this.panel15);
+            this.panel6.Controls.Add(this.panel14);
+            this.panel6.Controls.Add(this.panel13);
+            this.panel6.Location = new System.Drawing.Point(0, 242);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(358, 358);
+            this.panel6.Size = new System.Drawing.Size(562, 358);
             this.panel6.TabIndex = 4;
+            // 
+            // lbl_windHour6
+            // 
+            this.lbl_windHour6.AutoSize = true;
+            this.lbl_windHour6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour6.Location = new System.Drawing.Point(382, 343);
+            this.lbl_windHour6.Name = "lbl_windHour6";
+            this.lbl_windHour6.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour6.TabIndex = 34;
+            this.lbl_windHour6.Text = "Wind speed:";
+            // 
+            // lbl_condHour6
+            // 
+            this.lbl_condHour6.AutoSize = true;
+            this.lbl_condHour6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour6.Location = new System.Drawing.Point(407, 289);
+            this.lbl_condHour6.Name = "lbl_condHour6";
+            this.lbl_condHour6.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour6.TabIndex = 35;
+            this.lbl_condHour6.Text = "condition of weather";
+            this.lbl_condHour6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour6
+            // 
+            this.picture_hour6.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour6.Location = new System.Drawing.Point(463, 307);
+            this.picture_hour6.Name = "picture_hour6";
+            this.picture_hour6.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour6.TabIndex = 36;
+            this.picture_hour6.TabStop = false;
+            // 
+            // lbl_TempHour6
+            // 
+            this.lbl_TempHour6.AutoSize = true;
+            this.lbl_TempHour6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour6.Location = new System.Drawing.Point(284, 289);
+            this.lbl_TempHour6.Name = "lbl_TempHour6";
+            this.lbl_TempHour6.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour6.TabIndex = 37;
+            this.lbl_TempHour6.Text = "15 C";
+            // 
+            // lbl_windHour3
+            // 
+            this.lbl_windHour3.AutoSize = true;
+            this.lbl_windHour3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour3.Location = new System.Drawing.Point(98, 343);
+            this.lbl_windHour3.Name = "lbl_windHour3";
+            this.lbl_windHour3.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour3.TabIndex = 30;
+            this.lbl_windHour3.Text = "Wind speed:";
+            // 
+            // lbl_condHour3
+            // 
+            this.lbl_condHour3.AutoSize = true;
+            this.lbl_condHour3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour3.Location = new System.Drawing.Point(112, 289);
+            this.lbl_condHour3.Name = "lbl_condHour3";
+            this.lbl_condHour3.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour3.TabIndex = 31;
+            this.lbl_condHour3.Text = "condition of weather";
+            this.lbl_condHour3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour3
+            // 
+            this.picture_hour3.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour3.Location = new System.Drawing.Point(177, 309);
+            this.picture_hour3.Name = "picture_hour3";
+            this.picture_hour3.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour3.TabIndex = 32;
+            this.picture_hour3.TabStop = false;
+            // 
+            // lbl_TempHour3
+            // 
+            this.lbl_TempHour3.AutoSize = true;
+            this.lbl_TempHour3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour3.Location = new System.Drawing.Point(0, 289);
+            this.lbl_TempHour3.Name = "lbl_TempHour3";
+            this.lbl_TempHour3.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour3.TabIndex = 33;
+            this.lbl_TempHour3.Text = "15 C";
+            // 
+            // lbl_windHour5
+            // 
+            this.lbl_windHour5.AutoSize = true;
+            this.lbl_windHour5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour5.Location = new System.Drawing.Point(382, 233);
+            this.lbl_windHour5.Name = "lbl_windHour5";
+            this.lbl_windHour5.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour5.TabIndex = 26;
+            this.lbl_windHour5.Text = "Wind speed:";
+            // 
+            // lbl_condHour5
+            // 
+            this.lbl_condHour5.AutoSize = true;
+            this.lbl_condHour5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour5.Location = new System.Drawing.Point(407, 184);
+            this.lbl_condHour5.Name = "lbl_condHour5";
+            this.lbl_condHour5.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour5.TabIndex = 27;
+            this.lbl_condHour5.Text = "condition of weather";
+            this.lbl_condHour5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour5
+            // 
+            this.picture_hour5.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour5.Location = new System.Drawing.Point(463, 202);
+            this.picture_hour5.Name = "picture_hour5";
+            this.picture_hour5.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour5.TabIndex = 28;
+            this.picture_hour5.TabStop = false;
+            // 
+            // lbl_TempHour5
+            // 
+            this.lbl_TempHour5.AutoSize = true;
+            this.lbl_TempHour5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour5.Location = new System.Drawing.Point(284, 184);
+            this.lbl_TempHour5.Name = "lbl_TempHour5";
+            this.lbl_TempHour5.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour5.TabIndex = 29;
+            this.lbl_TempHour5.Text = "15 C";
+            // 
+            // lbl_windHour2
+            // 
+            this.lbl_windHour2.AutoSize = true;
+            this.lbl_windHour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour2.Location = new System.Drawing.Point(98, 233);
+            this.lbl_windHour2.Name = "lbl_windHour2";
+            this.lbl_windHour2.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour2.TabIndex = 22;
+            this.lbl_windHour2.Text = "Wind speed:";
+            // 
+            // lbl_condHour2
+            // 
+            this.lbl_condHour2.AutoSize = true;
+            this.lbl_condHour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour2.Location = new System.Drawing.Point(112, 184);
+            this.lbl_condHour2.Name = "lbl_condHour2";
+            this.lbl_condHour2.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour2.TabIndex = 23;
+            this.lbl_condHour2.Text = "condition of weather";
+            this.lbl_condHour2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour2
+            // 
+            this.picture_hour2.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour2.Location = new System.Drawing.Point(177, 204);
+            this.picture_hour2.Name = "picture_hour2";
+            this.picture_hour2.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour2.TabIndex = 24;
+            this.picture_hour2.TabStop = false;
+            // 
+            // lbl_TempHour2
+            // 
+            this.lbl_TempHour2.AutoSize = true;
+            this.lbl_TempHour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour2.Location = new System.Drawing.Point(0, 184);
+            this.lbl_TempHour2.Name = "lbl_TempHour2";
+            this.lbl_TempHour2.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour2.TabIndex = 25;
+            this.lbl_TempHour2.Text = "15 C";
+            // 
+            // lbl_windHour4
+            // 
+            this.lbl_windHour4.AutoSize = true;
+            this.lbl_windHour4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour4.Location = new System.Drawing.Point(382, 125);
+            this.lbl_windHour4.Name = "lbl_windHour4";
+            this.lbl_windHour4.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour4.TabIndex = 18;
+            this.lbl_windHour4.Text = "Wind speed:";
+            // 
+            // lbl_condHour4
+            // 
+            this.lbl_condHour4.AutoSize = true;
+            this.lbl_condHour4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour4.Location = new System.Drawing.Point(407, 80);
+            this.lbl_condHour4.Name = "lbl_condHour4";
+            this.lbl_condHour4.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour4.TabIndex = 19;
+            this.lbl_condHour4.Text = "condition of weather";
+            this.lbl_condHour4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour4
+            // 
+            this.picture_hour4.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour4.Location = new System.Drawing.Point(463, 100);
+            this.picture_hour4.Name = "picture_hour4";
+            this.picture_hour4.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour4.TabIndex = 20;
+            this.picture_hour4.TabStop = false;
+            // 
+            // lbl_TempHour4
+            // 
+            this.lbl_TempHour4.AutoSize = true;
+            this.lbl_TempHour4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour4.Location = new System.Drawing.Point(284, 80);
+            this.lbl_TempHour4.Name = "lbl_TempHour4";
+            this.lbl_TempHour4.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour4.TabIndex = 21;
+            this.lbl_TempHour4.Text = "15 C";
+            // 
+            // lbl_windHour1
+            // 
+            this.lbl_windHour1.AutoSize = true;
+            this.lbl_windHour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_windHour1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_windHour1.Location = new System.Drawing.Point(98, 125);
+            this.lbl_windHour1.Name = "lbl_windHour1";
+            this.lbl_windHour1.Size = new System.Drawing.Size(86, 15);
+            this.lbl_windHour1.TabIndex = 14;
+            this.lbl_windHour1.Text = "Wind speed:";
+            // 
+            // lbl_condHour1
+            // 
+            this.lbl_condHour1.AutoSize = true;
+            this.lbl_condHour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_condHour1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_condHour1.Location = new System.Drawing.Point(112, 80);
+            this.lbl_condHour1.Name = "lbl_condHour1";
+            this.lbl_condHour1.Size = new System.Drawing.Size(155, 17);
+            this.lbl_condHour1.TabIndex = 15;
+            this.lbl_condHour1.Text = "condition of weather";
+            this.lbl_condHour1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picture_hour1
+            // 
+            this.picture_hour1.Image = global::WeatherApp.Properties.Resources.sunny_temperature_weather_icon_1320196637430890623_64;
+            this.picture_hour1.Location = new System.Drawing.Point(177, 100);
+            this.picture_hour1.Name = "picture_hour1";
+            this.picture_hour1.Size = new System.Drawing.Size(32, 32);
+            this.picture_hour1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_hour1.TabIndex = 16;
+            this.picture_hour1.TabStop = false;
+            // 
+            // lbl_TempHour1
+            // 
+            this.lbl_TempHour1.AutoSize = true;
+            this.lbl_TempHour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TempHour1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_TempHour1.Location = new System.Drawing.Point(0, 80);
+            this.lbl_TempHour1.Name = "lbl_TempHour1";
+            this.lbl_TempHour1.Size = new System.Drawing.Size(82, 36);
+            this.lbl_TempHour1.TabIndex = 17;
+            this.lbl_TempHour1.Text = "15 C";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel16.Location = new System.Drawing.Point(273, 66);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(10, 292);
+            this.panel16.TabIndex = 13;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel15.Controls.Add(this.label7);
+            this.panel15.Controls.Add(this.label4);
+            this.panel15.Location = new System.Drawing.Point(0, 251);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(562, 31);
+            this.panel15.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(284, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Next 6 hours";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(0, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Next 3 hours";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel14.Controls.Add(this.label6);
+            this.panel14.Controls.Add(this.label3);
+            this.panel14.Location = new System.Drawing.Point(0, 143);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(562, 31);
+            this.panel14.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(284, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Next 5 hours";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(0, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Next 2 hours";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel13.Controls.Add(this.label5);
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Location = new System.Drawing.Point(0, 31);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(562, 35);
+            this.panel13.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(284, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Next 4 hours";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(0, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Next hour";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
@@ -597,12 +1047,35 @@ namespace WeatherApp
             this.lbl_nextDays.Text = "Next 3 days";
             this.lbl_nextDays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.label1);
+            this.panel12.Location = new System.Drawing.Point(0, 242);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(562, 37);
+            this.panel12.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Next 6 hours";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(926, 612);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -625,6 +1098,20 @@ namespace WeatherApp
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_now)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_hour1)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_day3)).EndInit();
@@ -638,6 +1125,8 @@ namespace WeatherApp
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -687,6 +1176,42 @@ namespace WeatherApp
         private System.Windows.Forms.Label lbl_nameDay3;
         private System.Windows.Forms.Label lbl_nameDay2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_windHour6;
+        private System.Windows.Forms.Label lbl_condHour6;
+        private System.Windows.Forms.PictureBox picture_hour6;
+        private System.Windows.Forms.Label lbl_TempHour6;
+        private System.Windows.Forms.Label lbl_windHour3;
+        private System.Windows.Forms.Label lbl_condHour3;
+        private System.Windows.Forms.PictureBox picture_hour3;
+        private System.Windows.Forms.Label lbl_TempHour3;
+        private System.Windows.Forms.Label lbl_windHour5;
+        private System.Windows.Forms.Label lbl_condHour5;
+        private System.Windows.Forms.PictureBox picture_hour5;
+        private System.Windows.Forms.Label lbl_TempHour5;
+        private System.Windows.Forms.Label lbl_windHour2;
+        private System.Windows.Forms.Label lbl_condHour2;
+        private System.Windows.Forms.PictureBox picture_hour2;
+        private System.Windows.Forms.Label lbl_TempHour2;
+        private System.Windows.Forms.Label lbl_windHour4;
+        private System.Windows.Forms.Label lbl_condHour4;
+        private System.Windows.Forms.PictureBox picture_hour4;
+        private System.Windows.Forms.Label lbl_TempHour4;
+        private System.Windows.Forms.Label lbl_windHour1;
+        private System.Windows.Forms.Label lbl_condHour1;
+        private System.Windows.Forms.PictureBox picture_hour1;
+        private System.Windows.Forms.Label lbl_TempHour1;
     }
 }
 
