@@ -168,18 +168,25 @@ namespace WeatherWithMapp
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (textBox_Search.Text != "")
+            try
             {
-                var nameOfCity = textBox_Search.Text;
-                nameOfCity = nameOfCity.Replace(" ", "+");
-                getWeather(nameOfCity);
-                using (StreamWriter str = new StreamWriter("recent_searches.txt", true))
+                if (textBox_Search.Text != "")
                 {
-                    str.WriteLine(textBox_Search.Text);
+                    var nameOfCity = textBox_Search.Text;
+                    nameOfCity = nameOfCity.Replace(" ", "+");
+                    getWeather(nameOfCity);
+                    using (StreamWriter str = new StreamWriter("recent_searches.txt", true))
+                    {
+                        str.WriteLine(textBox_Search.Text);
+                    }
+                    getRecent();
+                    textBox_Search.Text = "Search for a city...";
+                    showMap();
                 }
-                getRecent();
-                textBox_Search.Text = "Search for a city...";
-                showMap();
+            }
+            catch
+            {
+                MessageBox.Show("There is no place with that name.","ERROR!");
             }
         }
         void getRecent()
@@ -255,27 +262,28 @@ namespace WeatherWithMapp
 
         private void map_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Right)
+            try
             {
-                var pointMap = map.FromLocalToLatLng(e.X, e.Y);
-                double latMap = pointMap.Lat;
-                double lngMap = pointMap.Lng;
-                PointLatLng point = new PointLatLng(latMap, lngMap);
-                using (StreamWriter str = new StreamWriter("coordinates.txt"))
+                if (e.Button == MouseButtons.Right)
                 {
-                    str.WriteLine(lngMap);
-                    str.WriteLine(latMap);
+                    var pointMap = map.FromLocalToLatLng(e.X, e.Y);
+                    double latMap = pointMap.Lat;
+                    double lngMap = pointMap.Lng;
+                    PointLatLng point = new PointLatLng(latMap, lngMap);
+                    using (StreamWriter str = new StreamWriter("coordinates.txt"))
+                    {
+                        str.WriteLine(lngMap);
+                        str.WriteLine(latMap);
+                    }
+                    getWeatherByCoords(latMap, lngMap);
+                    showMap();
                 }
-                //using (StreamReader sr = new StreamReader("coordinates.txt"))
-                //{
-                //    string[] lines = File.ReadAllLines("coordinates.txt");
-                //    string cityName;
-                //    cityName = lines[0];
-                //    getWeather(cityName);
-                //}
-                getWeatherByCoords(latMap, lngMap);
-                showMap();
             }
+            catch
+            {
+                MessageBox.Show("There is no information of weather on that coordinates.", "ERROR!");
+            }
+            
         }
     }
 }

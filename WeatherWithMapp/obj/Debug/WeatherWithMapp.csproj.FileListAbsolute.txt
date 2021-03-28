@@ -26,3 +26,31 @@ C:\Users\Matokanovic\Desktop\WeatherWithMapp\obj\Debug\WeatherWithMapp.Form1.res
 C:\Users\Matokanovic\Desktop\WeatherWithMapp\obj\Debug\WeatherWithMapp.csproj.CopyComplete
 C:\Users\Matokanovic\Desktop\WeatherWithMapp\obj\Debug\WeatherWithMapp.exe
 C:\Users\Matokanovic\Desktop\WeatherWithMapp\obj\Debug\WeatherWithMapp.pdb
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\WeatherWithMapp.exe.config
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\WeatherWithMapp.exe
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\WeatherWithMapp.pdb
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\EntityFramework.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\EntityFramework.SqlServer.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\GMap.NET.Core.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\GMap.NET.WindowsForms.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\GMap.NET.WindowsPresentation.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\Newtonsoft.Json.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SqlClient.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SQLite.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SQLite.EF6.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SQLite.Linq.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Security.Principal.Windows.dll
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\EntityFramework.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\EntityFramework.SqlServer.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\Newtonsoft.Json.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SqlClient.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Data.SQLite.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\bin\Debug\System.Security.Principal.Windows.xml
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.csprojAssemblyReference.cache
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.Form1.resources
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.Properties.Resources.resources
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.csproj.GenerateResource.cache
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.csproj.CoreCompileInputs.cache
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.csproj.CopyComplete
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.exe
+G:\Faks-RAZLIKOVNA\RAZLIKOVNA\Objektno Orijentirano Programiranje (razlika)\WeatherWithMapp\obj\Debug\WeatherWithMapp.pdb
